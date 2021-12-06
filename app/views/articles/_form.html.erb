@@ -1,0 +1,26 @@
+<div class="container text-center">
+  <%= form_with model: article do |form| %>
+
+    <div class="field form-group">
+      <%# <% # <%= form.label :title %><br> 
+      <%= form.text_field :title, class: "form-control", placeholder: "Title" %>
+      <% article.errors.full_messages_for(:title).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div class="field form-group">
+      <%# <% # <%= form.label :body %><br>
+      <%= form.text_area :body, class: "form-control", placeholder: "Content" %><br>
+      <% article.errors.full_messages_for(:body).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit class: "btn btn-outline-secondary " %>
+      <%= link_to "Back", articles_path, class: "btn btn-outline-secondary " %>
+
+    </div>
+  <% end %>
+</div>

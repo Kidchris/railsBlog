@@ -1,0 +1,24 @@
+<br/>
+<div class="text-center">
+    <h1>Articles : </h1>
+    <div class="small-text text-muted fw-lighter"> Total: <%= @articles.length %> </div>
+</div>
+<hr/>
+<br/>
+<div class="container">
+
+    <% @articles.each do |article| %>
+        <div class="card mb-8" style="height:10rem; max-width:50rem;">
+            <div class="card-header text-white bg-secondary">
+                <h3>Title : <%= link_to "#{article.title}", article, class: "text-warning" %></h3>
+            </div>
+            <div class="card-body">
+                <h5 >Content:</h5> 
+                <%= article.body %>
+            </div>
+        </div>
+            <br/>
+    <% end %>
+    <br>
+    <%= link_to "New Article", new_article_path, class: "btn btn-secondary" %>    
+</div>

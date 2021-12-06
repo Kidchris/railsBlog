@@ -1,0 +1,37 @@
+<br/>
+
+<div class="container ">
+    <div class=" card text-center bg-light border-info">
+        <h4> 
+        <div class="card-header bg-secondary text-white"> 
+                <h3> <%= @article.title %></h3> 
+        </div>
+            <br/>
+        </h4>
+        <div class="card-body">
+            <div class="card-text">
+                <%= @article.body %>
+            </div>
+        </div><br/>
+    </div>
+</div>
+<br/>
+<div class="btn-group btn-end text-end d-grid d-md-flex justify-content-md-end" role="group" style="margin-left:60rem;margin-right:6rem;">
+            <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-secondary me-md-2" %>
+            <%= link_to "Delete", article_path(@article),
+                        method: :delete,
+                        data: { confirm: "Are you sure?" }, class: "btn btn-outline-secondary me-md-2" %>
+            <%= link_to "Articles", articles_path, class: "btn btn-outline-secondary me-md-2" %>
+</div>
+
+<br/>
+<br/>
+
+<%= render "comments/comment" %>
+<br/>
+
+<%= render "comments/form" %>
+
+<br/>
+<br/>
+<br/>

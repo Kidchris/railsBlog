@@ -1,0 +1,25 @@
+<div class="container border border-warning rounded-3">
+    <div class="text-center" style="margin-left:-0rem">
+        <h5 class="text-center">Add a comment : </h5>
+    </div>
+
+    <div class="container col-6" style="margin-left:6rem">
+        <%= form_with model: [@article, @article.comments.build] do |form| %>
+        <div class="sm-3">
+            <% # <%= form.label :commenter, class: "form-label" %>
+            <%= form.text_field :commenter, class: "col-9 form-control text-center", placeholder: "Name:", rows: "3" %>
+        </div>
+        <br/>
+        <div class="sm-3" >
+            <% # <%= form.label :body, class: "form-label" %>
+            <%= form.text_area :body, class: "col-6 field form-control text-center", placeholder: "Comment here!", rows: "5" %>
+        </div>
+        <br/>
+    </div>  
+        <div class="text-center">
+            <%= form.submit class: "btn btn-outline-secondary text-center" %>
+            <% end %>
+
+        </div>
+    <br/>
+</div>
