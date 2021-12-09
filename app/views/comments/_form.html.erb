@@ -16,10 +16,14 @@
         </div>
         <br/>
     </div>  
-        <div class="text-center">
-            <%= form.submit class: "btn btn-outline-secondary text-center" %>
-            <% end %>
+    <div>
+        <%= form.label :status %><br>
+        <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+    </div>
+    <div class="text-center">
+        <%= form.submit class: "btn btn-outline-secondary text-center" %>
+        <% end %>
 
-        </div>
+    </div>
     <br/>
 </div>
