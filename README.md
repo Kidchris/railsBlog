@@ -21,4 +21,4 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* Preview : https://cryptic-stream-17011.herokuapp.com/articles
